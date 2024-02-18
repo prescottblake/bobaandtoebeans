@@ -23,8 +23,12 @@ img	{
 
 /* Style rules for mobile viewport */
 
-/* Hide tab-desk */
-.tab-desk {
+/* Hide tab-desk and desktop */
+.tablet-desktop {
+	display: none;
+}
+
+.desktop{
 	display: none;
 }
 
@@ -33,6 +37,10 @@ header {
 	text-align: center;
 	font-size: 1.5em;
 	color: #804d00;
+}
+
+header img{
+	display: none;
 }
 
 header h1 {
@@ -61,7 +69,7 @@ nav li a {
 	display: block;
 	color: #804d00; 
 	text-align: center;
-	padding: 0.5em 1em;
+	padding: 0.25em 1em;
 	text-decoration: none;
 }
 
@@ -83,8 +91,8 @@ main {
 	margin: auto;
 	padding: 1em;
 	border: 2px solid #804d00;
-	border-radius: 4px;
-	width: 75%;
+	border-radius: 10px;
+	width: 90%;
 	background-color: #ecd9c6;
 	font-size: 1.5em;
 	color: #804d00;
@@ -101,8 +109,23 @@ main {
 	width: 80%;
 	margin: auto;
 }
+
+#about_page_title{
+	text-align: center;
+	margin-bottom: .5em;
+}
 .price{
 	float: right;
+}
+
+.emphasis{
+	font-weight: bold;
+	color: #804d00;
+	font-size: 1.25em;
+}
+
+.cat_pictures{
+	border-radius: 2.5%;
 }
 
 /* Style rules for footer content */
@@ -123,6 +146,131 @@ footer p a{
 	color: #000;
 }
 
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print{
+
+	/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+	.tablet-desktop {
+		display: block;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	/* Tablet Viewport: Style rule for header */
+	header {
+		margin: 0%;
+		padding: 0%;
+		text-align: left;
+		background-color: #ffc358;
+	}
+
+	header img{
+		width: 15%;
+		display: inline-block;
+		margin-bottom: none;
+	}
+
+	header h1 {
+		display: none;
+	}
+
+	/* Tablet Viewport: Style rules for nav area */
+	nav {
+		border-top: solid 3px #fff;
+		border-bottom: solid 3px #fff;
+	}
+	nav ul{
+		text-align: right;
+	}
+
+	nav li {
+		border-top: none;
+		display: inline-block;
+		border-right: 1px solid #fff;
+	}
+
+	nav li:last-child {
+		border-right: none;
+		border-bottom: none;
+	}
+
+	nav li a {
+		padding: 0.25em 0.75em;
+	}
+
+	/* Tablet Viewport: Style rules for main content area */
+	main{
+		padding-top: 2%;
+	}
+	main ul {
+		margin: 0 0 4% 0%;
+	}
+
+	#menu_coffee_image {
+		width: 95%;
+		border-radius:50%;
+		margin: 2.5% auto;
+	}
+
+	#about_artemis, #about_apollo {
+		width: 45%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+}
+
+/* Media query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+
+	/* Desktop Viewport: Show desktop class, hide mobile class */
+	.desktop {
+		display: block;
+	}
+
+	/* Desktop Viewport: Style rule for header */
+	header img{
+		width: 10%;
+		display: inline-block;
+		margin-bottom: none;
+	}
+	/* Desktop Viewport: Style rules for nav area */
+
+	/* Desktop Viewport: Style rules for main content */
+	main{
+		padding: 1%;
+	}
+
+	main img{
+
+	}
+
+	#menu_coffee_image {
+		width: 95%;
+		border-radius:10px;
+		margin: 2.5% auto;
+	}
+
+	#about_artemis, #about_apollo, #chefs {
+		width: 32%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	/* Media Query for Large Desktop Viewports */
+	@media screen and (min-width: 1921px) {
+
+		#container {
+			width: 1920px;
+			margin: 0 auto;
+		}
+	}
+}
 
 /* Media Query for Print */
 @media print {
